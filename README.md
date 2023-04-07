@@ -7,3 +7,6 @@ CSS(TailwindCSS)
 オンラインFPSゲームで複数のプレイヤーを2組に分けることができます。<br>
 完全ランダムでの振り分けと、ゲーム内ランクに基づいた振り分けの2種類があります。<br>
 対応ゲームはVALORANT, OVERWATCH, CS:GOの3タイトルです。<br>
+
+### URL
+deployed Vercel → [Here](https://team-balancer.vercel.app/)
