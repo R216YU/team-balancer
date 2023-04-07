@@ -1,0 +1,27 @@
+.input {
+  @apply border-2 rounded m-1 p-1;
+}
+
+.select {
+  @apply border-2 rounded m-1 p-1  duration-300;
+}
+
+.btn {
+  @apply bg-blue-500 hover:bg-blue-700 text-white px-3 m-1 py-1 rounded duration-300;
+}
+.delBtn {
+  @apply bg-red-500 hover:bg-red-700 text-white px-3 m-1 py-1 rounded duration-300;
+}
+
+.link {
+  @apply bg-teal-100 hover:bg-teal-300 transition-all duration-300 rounded px-3 py-2;
+}
+
+.list {
+  list-style-type: circle;
+  list-style-position: inside;
+}
+.howToUse {
+  width: max-content;
+  margin: 0 auto;
+}
