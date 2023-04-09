@@ -8,7 +8,7 @@ const HowToUse = () => {
       <ul className="howToUse">
         <li className="my-16">
           <div className="flex items-center gap-8">
-            <RiNumber1 className="text-6xl text-blue-500" />
+            <RiNumber1 className="text-6xl text-accent" />
             <div className="text-center">
               <p>チーム分けを行いたいゲームを選択</p>
             </div>
@@ -16,7 +16,7 @@ const HowToUse = () => {
         </li>
         <li className="my-16">
           <div className="flex items-center gap-8">
-            <RiNumber2 className="text-6xl text-blue-500" />
+            <RiNumber2 className="text-6xl text-accent" />
             <div className="text-center">
               <p>プレイヤーの名前とランクを入力して追加</p>
             </div>
@@ -24,7 +24,7 @@ const HowToUse = () => {
         </li>
         <li className="my-16">
           <div className="flex items-center gap-8">
-            <RiNumber3 className="text-6xl text-blue-500" />
+            <RiNumber3 className="text-6xl text-accent" />
             <div className="text-center">
               <p>振り分けボタンをクリック</p>
             </div>
@@ -32,7 +32,7 @@ const HowToUse = () => {
         </li>
         <li className="my-16">
           <div className="flex items-center gap-8">
-            <CiSquarePlus className="text-6xl text-blue-500" />
+            <CiSquarePlus className="text-6xl text-accent" />
             <div className="text-center">
               <p>再度振り分ける場合は、もう一度振り分けボタンをクリック</p>
             </div>

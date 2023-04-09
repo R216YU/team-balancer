@@ -4,9 +4,9 @@ import { useDispatch } from "../context/Context";
 
 import { SiValorant, SiCounterstrike } from "react-icons/si";
 
-const Form = (game) => {
+const Form = ({game}) => {
   // gameのrankオブジェクトを取得
-  const gameRankObject = getGameObj(game.game);
+  const gameRankObject = getGameObj(game);
   const gameRankList = Object.keys(gameRankObject);
 
   const [player, setPlayer] = useState("");
@@ -26,13 +26,13 @@ const Form = (game) => {
   return (
     <div>
       <h2 className="text-2xl mb-16">
-        {game.game === "VALORANT" && (
+        {game === "VALORANT" && (
           <SiValorant className="inline text-red-400 mr-2" />
         )}
-        {game.game === "CSGO" && (
+        {game === "CSGO" && (
           <SiCounterstrike className="inline text-orange-400 mr-2" />
         )}
-        {game.game} Balancer
+        {game} Balancer
       </h2>
       <div>
         <form

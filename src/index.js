@@ -6,6 +6,8 @@ import App from "./App";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <App />
+    <div className="bg-back text-str">
+      <App />
+    </div>
   </React.StrictMode>
 );

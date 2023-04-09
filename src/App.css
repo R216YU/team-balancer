@@ -1,20 +1,20 @@
 .input {
-  @apply border-2 rounded m-1 p-1;
+  @apply border-2 rounded m-1 p-1 text-back;
 }
 
 .select {
-  @apply border-2 rounded m-1 p-1  duration-300;
+  @apply border-2 rounded m-1 py-1 px-2 text-back;
 }
 
 .btn {
-  @apply bg-blue-500 hover:bg-blue-700 text-white px-3 m-1 py-1 rounded duration-300;
+  @apply bg-accent hover:bg-accentHover text-white px-3 m-1 py-1 rounded duration-300;
 }
 .delBtn {
-  @apply bg-red-500 hover:bg-red-700 text-white px-3 m-1 py-1 rounded duration-300;
+  @apply bg-red-500 hover:bg-red-700 text-white px-3 my-1 mx-2 py-1 rounded duration-300;
 }
 
 .link {
-  @apply bg-teal-100 hover:bg-teal-300 transition-all duration-300 rounded px-3 py-2;
+  @apply border bg-back hover:bg-backHover transition-all duration-200 rounded-md px-3 py-2;
 }
 
 .list {

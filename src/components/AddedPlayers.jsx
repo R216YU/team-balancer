@@ -1,6 +1,6 @@
 import { useDispatch, usePlayers } from "../context/Context";
 
-const AddedPlayers = (game) => {
+const AddedPlayers = ({game}) => {
   const players = usePlayers();
   const dispatch = useDispatch();
 
@@ -17,7 +17,7 @@ const AddedPlayers = (game) => {
     dispatch({ type: "shuffle" });
   };
   const balance = () => {
-    dispatch({ type: "balance", game: game.game });
+    dispatch({ type: "balance", game: game });
   };
 
   return (
