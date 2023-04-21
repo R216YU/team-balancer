@@ -1,10 +1,12 @@
 import { useState } from "react";
-import { getGameObj } from "../context/Ranks";
-import { useDispatch } from "../context/Context";
+import { useDispatch } from "react-redux";
 
 import { SiValorant, SiCounterstrike } from "react-icons/si";
 
-const Form = ({game}) => {
+import { getGameObj } from "../redux/module/ranks";
+import { add } from "../redux/balancerSlice";
+
+const Form = ({ game }) => {
   // gameのrankオブジェクトを取得
   const gameRankObject = getGameObj(game);
   const gameRankList = Object.keys(gameRankObject);
@@ -14,12 +16,13 @@ const Form = ({game}) => {
   const dispatch = useDispatch();
 
   // プレイヤーを追加
-  const add = () => {
-    dispatch({
-      type: "add",
-      player: player,
-      rank: rank,
-    });
+  const addHandler = () => {
+    dispatch(
+      add({
+        player: player,
+        rank: rank,
+      })
+    );
     setPlayer("");
   };
 
@@ -38,7 +41,7 @@ const Form = ({game}) => {
         <form
           onSubmit={(e) => {
             e.preventDefault();
-            add();
+            addHandler();
           }}
           className="inline"
         >
@@ -61,7 +64,7 @@ const Form = ({game}) => {
           })}
         </select>
 
-        <button onClick={add} className="btn">
+        <button onClick={addHandler} className="btn">
           追加
         </button>
       </div>

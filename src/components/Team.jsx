@@ -1,7 +1,8 @@
-import { useTeams } from "../context/Context";
+import { useSelector } from "react-redux";
 
 const Team = () => {
-  const { teamA, teamB } = useTeams();
+  const teamA = useSelector((state) => state.balancer.teamA);
+  const teamB = useSelector((state) => state.balancer.teamB);
 
   return (
     <div>

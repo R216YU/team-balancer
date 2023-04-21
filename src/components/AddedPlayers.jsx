@@ -1,23 +1,24 @@
-import { useDispatch, usePlayers } from "../context/Context";
+import { useDispatch, useSelector } from "react-redux";
+import { reset, eliminate, shuffle, balance } from "../redux/balancerSlice";
 
-const AddedPlayers = ({game}) => {
-  const players = usePlayers();
-  const dispatch = useDispatch();
+const AddedPlayers = ({ game }) => {
+  const players = useSelector((state) => state.balancer.players);
+  const dispatch = useDispatch("");
 
   // 追加されているプレイヤーをすべて消去
-  const reset = () => {
-    dispatch({ type: "reset" });
+  const resetHandler = () => {
+    dispatch(reset());
   };
   // 任意のプレイヤーを消去
-  const eliminate = (id) => {
-    dispatch({ type: "eliminate", id: id });
+  const eliminateHandler = (id) => {
+    dispatch(eliminate({ id: id }));
   };
   // チーム振り分け
-  const shuffle = () => {
-    dispatch({ type: "shuffle" });
+  const shuffleHandler = () => {
+    dispatch(shuffle());
   };
-  const balance = () => {
-    dispatch({ type: "balance", game: game });
+  const balanceHandler = () => {
+    dispatch(balance({ game: game }));
   };
 
   return (
@@ -28,7 +29,10 @@ const AddedPlayers = ({game}) => {
           return (
             <li key={player.id} className="list">
               {player.player} ({player.rank})
-              <button onClick={() => eliminate(player.id)} className="delBtn">
+              <button
+                onClick={() => eliminateHandler(player.id)}
+                className="delBtn"
+              >
                 削除
               </button>
             </li>
@@ -36,13 +40,13 @@ const AddedPlayers = ({game}) => {
         })}
       </ul>
       <div className="mt-8">
-        <button onClick={reset} className="btn">
+        <button onClick={resetHandler} className="btn">
           リセット
         </button>
-        <button onClick={shuffle} className="btn">
+        <button onClick={shuffleHandler} className="btn">
           ランダム振り分け
         </button>
-        <button onClick={balance} className="btn">
+        <button onClick={balanceHandler} className="btn">
           ランク振り分け
         </button>
       </div>

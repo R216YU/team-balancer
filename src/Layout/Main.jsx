@@ -1,22 +1,19 @@
 import Form from "../components/Form";
 import Team from "../components/Team";
 import AddedPlayers from "../components/AddedPlayers";
-import { ContextProvider } from "../context/Context";
 
-const Main = ({game}) => {
+const Main = (props) => {
   return (
     <main className="container mx-auto my-20 font-notoSans h-screen">
-      <ContextProvider>
-        <Form game={game} />
-        <div className="flex gap-8 justify-evenly">
-          <div className="flex-1">
-            <AddedPlayers game={game} />
-          </div>
-          <div className="flex-1">
-            <Team />
-          </div>
+      <Form game={props.game} />
+      <div className="flex gap-8 justify-evenly">
+        <div className="flex-1">
+          <AddedPlayers game={props.game} />
         </div>
-      </ContextProvider>
+        <div className="flex-1">
+          <Team />
+        </div>
+      </div>
     </main>
   );
 };
