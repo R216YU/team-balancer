@@ -1,6 +1,6 @@
 ### Team Balancer for FPS
 
-###使用言語
+### 使用言語
 JavaScript
 React
 Redux
