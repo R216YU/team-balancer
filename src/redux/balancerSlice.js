@@ -35,7 +35,7 @@ const balancer = createSlice({
     balance(state, action) {
       console.log("reducer/balance");
       const gameRankObject = getGameObj(action.payload.game);
-      const newPlayers = [...state];
+      const newPlayers = [...state.players];
       newPlayers.map((player) => {
         player.rating =
           gameRankObject[player.rank] + Math.floor(Math.random() * 11) - 5;

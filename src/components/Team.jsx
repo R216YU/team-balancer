@@ -7,7 +7,7 @@ const Team = () => {
   return (
     <div>
       <div className="flex justify-evenly">
-        <div>
+        <div className="flex-1">
           <h3 className="font-bold mt-8 mb-4">TeamA</h3>
           <ul>
             {teamA.map((player) => {
@@ -19,7 +19,7 @@ const Team = () => {
             })}
           </ul>
         </div>
-        <div>
+        <div className="flex-1">
           <h3 className="font-bold mt-8 mb-4">TeamB</h3>
           <ul>
             {teamB.map((player) => {
